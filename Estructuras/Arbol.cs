@@ -35,9 +35,12 @@ namespace Estructuras
 
         private void CrearNodo(ref Nodo q, int dato)
         {
-            q = new Nodo(dato, q, q);
-            q.Izquierda = null;
-            q.Derecha = null;
+            if (dato != 0)
+            {
+                q = new Nodo(dato, q, q);
+                q.Izquierda = null;
+                q.Derecha = null;
+            }
         }
         private void InsertarNodo(ref Nodo r, int dato)
         {
